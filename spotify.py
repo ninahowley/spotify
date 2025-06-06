@@ -102,8 +102,8 @@ else:
         st.session_state["logged_in"] = False
         st.experimental_rerun() # Rerun the app to show login button
 
-artists = sp.current_user_top_artists()
-songs = sp.current_user_top_tracks("long_term")
+artists = sp.current_user_top_artists(time_range="long_term")
+songs = sp.current_user_top_tracks(time_range="long_term")
 
 col1, col2 = st.columns((2))
 
